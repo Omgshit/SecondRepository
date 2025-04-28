@@ -1899,16 +1899,16 @@ Module.FastAttack = (function()
 					
 				if ToolTip == "Blox Fruit" then
 					if ToolName == "Ice-Ice" or ToolName == "Light-Light" then
-						return self:UseNormalClick(Humanoid, Character)
+						return self:UseNormalClick(Humanoid, Character, Cooldown)
 					elseif Equipped:FindFirstChild("LeftClickRemote") then
-						return self:UseFruitM1(Character, Equipped)
+						return self:UseFruitM1(Character, Equipped, Combo)
 					end
 				elseif ToolTip == "Gun" then
 					if SUCCESS_SHOOT and SHOOT_FUNCTION and Settings.AutoShoot then
 						return self:UseGunShoot(Character, Equipped)
 					end
 				else
-					return self:UseNormalClick(Humanoid, Character)
+					return self:UseNormalClick(Humanoid, Character, Cooldown)
 				end
 			end
 		end
