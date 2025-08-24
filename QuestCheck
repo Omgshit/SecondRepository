@@ -632,30 +632,7 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             Qname = 'TikiQuest3'
             NameMon = 'Skull Slayer'
             PosQ = CFrame.new(- 16759.58984375, 71.28376770019531, 1595.3399658203125)
-            PosM = CFrame.new(- 16759.58984375, 71.28376770019531, 1595.3399658203125)
-            elseif s == 2600 or s <= 2751 then
-         if game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") == false then
- for i,v in pairs(game.ReplicatedStorage.NPCs:GetChildren()) do
-       if v.Name == "Submarine Worker" then 
-_tp(v.HumanoidRootPart.CFrame*CFrame.new(0,0,-5))
-end            
-end     
-local args = {
-    "TravelToSubmergedIsland"
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/SubmarineWorkerSpeak"):InvokeServer(unpack(args))            
-end     
-if not game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") then
- for i,v in pairs(game.ReplicatedStorage.NPCs:GetChildren()) do
-       if v.Name == "Submarine Worker" then 
-_tp(v.HumanoidRootPart.CFrame*CFrame.new(0,0,-5))
-end            
-end     
-local args = {
-    "TravelToSubmergedIsland"
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/SubmarineWorkerSpeak"):InvokeServer(unpack(args))            
-end     
+            PosM = CFrame.new(- 16759.58984375, 71.28376770019531, 1595.3399658203125)          
          if game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") and game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") == true then
         elseif s == 2600 or s <= 2624 then
             Mon = 'Reef Bandit'
