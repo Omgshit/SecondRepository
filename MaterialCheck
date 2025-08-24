@@ -127,5 +127,12 @@ local s = game.Players.LocalPlayer
             }
             MPos = CFrame.new(- 9495.6806640625, 453.58624267578125, 5977.3486328125)
             SP = 'Default'
+        elseif SelectMaterial == 'Volt Capsule' then
+            MMon = {
+                'Sea Chanter',
+                'Ocean Prophet'
+            }
+            MPos = CFrame.new(10627, -2021, 10055)
+            SP = 'Default'
         end
     end
