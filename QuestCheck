@@ -421,14 +421,14 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             Qdata = 1
             Qname = 'MarineTreeIsland'
             NameMon = 'Marine Commodore'
-            PosQ = CFrame.new(2180.54126, 27.8156815, - 6741.5498, - 0.965929747, 0, 0.258804798, 0, 1, 0, - 0.258804798, 0, - 0.965929747)
+            PosQ = CFrame.new(2484, 74, -6790)
             PosM = CFrame.new(2286.0078125, 73.13391876220703, - 7159.80908203125)
         elseif s == 1725 or s <= 1774 then
             Mon = 'Marine Rear Admiral'
             NameMon = 'Marine Rear Admiral'
             Qname = 'MarineTreeIsland'
             Qdata = 2
-            PosQ = CFrame.new(2179.98828125, 28.731239318848, - 6740.0551757813)
+            PosQ = CFrame.new(2484, 74, -6790)
             PosM = CFrame.new(3656.773681640625, 160.52406311035156, - 7001.5986328125)
         elseif s == 1775 or s <= 1799 then
             Mon = 'Fishman Raider'
