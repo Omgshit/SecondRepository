@@ -633,7 +633,6 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             NameMon = 'Skull Slayer'
             PosQ = CFrame.new(- 16759.58984375, 71.28376770019531, 1595.3399658203125)
             PosM = CFrame.new(- 16759.58984375, 71.28376770019531, 1595.3399658203125)          
-         if game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") then
         elseif s == 2600 or s <= 2624 then
             Mon = 'Reef Bandit'
             Qdata = 1
@@ -663,7 +662,6 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             PosQ = CFrame.new(10779, -2088, 9263)
             PosM = CFrame.new(11072, -1957, 10130)
          end                 
-       end
       if s >= 2600 then
       if game.Lighting.LightingLayers.SubmergedIsland:GetAttribute("Enabled") == false then
  for i,v in pairs(game.ReplicatedStorage.NPCs:GetChildren()) do
