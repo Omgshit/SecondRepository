@@ -660,6 +660,6 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             Qname = 'SubmergedQuest2'
             NameMon = 'Ocean Prophet'
             PosQ = CFrame.new(10779, -2088, 9263)
-            PosM = CFrame.new(11072, -1957, 10130)
+            PosM = CFrame.new(10925, -2008, 10204)
          end                       
     end
