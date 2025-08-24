@@ -107,7 +107,7 @@ local s = game.Players.LocalPlayer
                 'Dragon Crew Archer',
                 'Dragon Crew Warrior'
             }
-            MPos = CFrame.new(6594, 383, 139)
+            MPos = CFrame.new(6631, 602, 142)
             SP = 'Default'
         elseif SelectMaterial == 'Gunpowder' then
             MMon = {
