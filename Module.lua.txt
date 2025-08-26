@@ -61,6 +61,9 @@ local Connections = {} do
       Connection:Disconnect()
     end
   end
+  
+  _ENV.rz_connections = Connections
+end
 
 local function GetEnemyName(string)
   return (string:find("Lv. ") and string:gsub(" %pLv. %d+%p", "") or string):gsub(" %pBoss%p", "")
@@ -124,11 +127,11 @@ local Module = {} do
   
   Module.IsSuperBring = false
   Module.RemoveCanTouch = 0
-  Module.AttackCooldown = 0.5
+  Module.AttackCooldown = 0
   Module.MaxLevel = 2600
   Module.Webhooks = true
   Module.JobIds = true
-
+  
   Module.allMobs = { __RaidBoss = {}, __Bones = {}, __Elite = {}, __CakePrince = {} }
   Module.Progress = {}
   Module.SpawnedFruits = {}
