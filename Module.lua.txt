@@ -55,16 +55,6 @@ local KILLAURA_TAG = _ENV._KillAura_Tag or `k{math.random(120, 2e4)}t`
 _ENV._Bring_Tag = BRING_TAG
 _ENV._KillAura_Tag = KILLAURA_TAG
 
-local Connections = {} do
-  if _ENV.rz_connections then
-    for _, Connection in ipairs(_ENV.rz_connections) do
-      Connection:Disconnect()
-    end
-  end
-  
-  _ENV.rz_connections = Connections
-end
-
 local function GetEnemyName(string)
   return (string:find("Lv. ") and string:gsub(" %pLv. %d+%p", "") or string):gsub(" %pBoss%p", "")
 end
@@ -128,7 +118,7 @@ local Module = {} do
   Module.IsSuperBring = false
   Module.RemoveCanTouch = 0
   Module.AttackCooldown = 0
-  Module.MaxLevel = 2600
+  Module.MaxLevel = 2750
   Module.Webhooks = true
   Module.JobIds = true
   
