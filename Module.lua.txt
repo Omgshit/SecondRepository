@@ -117,10 +117,8 @@ local Module = {} do
   
   Module.IsSuperBring = false
   Module.RemoveCanTouch = 0
-  Module.AttackCooldown = 0
-  Module.MaxLevel = 2650
-  Module.Webhooks = true
-  Module.JobIds = true
+  Module.AttackCooldown = 0.5
+  Module.MaxLevel = 2600
   
   Module.allMobs = { __RaidBoss = {}, __Bones = {}, __Elite = {}, __CakePrince = {} }
   Module.Progress = {}
