@@ -641,10 +641,10 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             PosQ = CFrame.new(10779, -2088, 9263)
             PosM = CFrame.new(11052, -2082, 9141)
        elseif s == 2625 or s <= 2649 then
-            Mon = 'Coral Bandit'
+            Mon = 'Coral Pirate'
             Qdata = 2
             Qname = 'SubmergedQuest1'
-            NameMon = 'Coral Bandit'
+            NameMon = 'Coral Pirate'
             PosQ = CFrame.new(10779, -2088, 9263)
             PosM = CFrame.new(10779, -2088, 9263)
        elseif s == 2650 or s <= 2674 then
