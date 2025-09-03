@@ -64,14 +64,14 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             Qname = 'SnowQuest'
             NameMon = 'Snow Bandit'
             PosQ = CFrame.new(1389.74451, 88.1519318, - 1298.90796, - 0.342042685, 0, 0.939684391, 0, 1, 0, - 0.939684391, 0, - 0.342042685)
-            PosM = CFrame.new(1354.347900390625, 87.27277374267578, - 1393.946533203125)
+            PosM = CFrame.new(1389.74451, 88.1519318, - 1298.90796, - 0.342042685, 0, 0.939684391, 0, 1, 0, - 0.939684391, 0, - 0.342042685)
         elseif s == 100 or s <= 119 then
             Mon = 'Snowman'
             Qdata = 2
             Qname = 'SnowQuest'
             NameMon = 'Snowman'
             PosQ = CFrame.new(1389.74451, 88.1519318, - 1298.90796, - 0.342042685, 0, 0.939684391, 0, 1, 0, - 0.939684391, 0, - 0.342042685)
-            PosM = CFrame.new(6241.9951171875, 51.522083282471, - 1243.9771728516)
+            PosM = CFrame.new(1389.74451, 88.1519318, - 1298.90796, - 0.342042685, 0, 0.939684391, 0, 1, 0, - 0.939684391, 0, - 0.342042685)
         elseif s == 120 or s <= 149 then
             Mon = 'Chief Petty Officer'
             Qdata = 1
