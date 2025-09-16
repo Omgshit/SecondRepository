@@ -77,7 +77,7 @@ Translations = {
 		["Misc"] = "เบ็ดเตล็ด",
 		["Thanks"] = "ขอบคุณ",
 			["Message"] = "ข้อความ",
-			["Makw With ❤️"] = "ทำด้วยใจ ❤️",
+			["Make With ❤️"] = "ทำด้วยใจ ❤️",
 		["Farm"] = "ฟาร์ม",
 			["Select Enemy"] = "เลือกศัตรู",
 			["Update Dropdown"] = "อัปเดตรายการ",
@@ -142,7 +142,7 @@ Translations = {
 		["Misc"] = "Khác",
 		["Thanks"] = "Cảm Ơn",
 			["Message"] = "Tin Nhắn",
-			["Makw With ❤️"] = "Làm Bằng Trái Tim ❤️",
+			["Make With ❤️"] = "Làm Bằng Trái Tim ❤️",
 		["Farm"] = "Farm",
 			["Select Enemy"] = "Chọn Kẻ Thù",
 			["Update Dropdown"] = "Cập Nhật Danh Sách",
@@ -195,4 +195,5 @@ Translations = {
 			["Auto God Human"] = "Mở Khóa Thần Nhân",
 	},
 }
+
 
