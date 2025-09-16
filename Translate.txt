@@ -12,7 +12,7 @@ Translations = {
 		["Misc"] = "Miscelânea",
 		["Thanks"] = "Obrigado",
 			["Message"] = "Mensagem",
-			["Makw With ❤️"] = "Feito Com ❤️",
+			["Make With ❤️"] = "Feito Com ❤️",
 		["Farm"] = "Farmar",
 			["Select Enemy"] = "Selecione O Inimigo",
 			["Update Dropdown"] = "Atualize A Lista",
@@ -195,3 +195,4 @@ Translations = {
 			["Auto God Human"] = "Mở Khóa Thần Nhân",
 	},
 }
+
