@@ -654,12 +654,26 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             NameMon = 'Sea Chanter'
             PosQ = CFrame.new(10882, -2086, 10032)
             PosM = CFrame.new(10627, -2021, 10055)
-       elseif s >= 2675 then
+       elseif s == 2675 or s <= 2699 then
             Mon = 'Ocean Prophet'
             Qdata = 2
             Qname = 'SubmergedQuest2'
             NameMon = 'Ocean Prophet'
             PosQ = CFrame.new(10779, -2088, 9263)
             PosM = CFrame.new(10925, -2008, 10204)
+        elseif s == 2700 or s <= 2724 then
+            Mon = 'High Disciple'
+            Qdata = 1
+            Qname = 'SubmergedQuest3'
+            NameMon = 'High Disciple'
+            PosQ = CFrame.new(9638, -1992, 9613)
+            PosM = CFrame.new(9826, -1994, 9624)
+        elseif s == 2725 or s <= 2749 then
+            Mon = 'Grand Devotee'
+            Qdata = 2
+            Qname = 'SubmergedQuest3'
+            NameMon = 'Grand Devotee'
+            PosQ = CFrame.new(9638, -1992, 9613)
+            PosM = CFrame.new(9818, -1993, 9918)
          end                       
     end
