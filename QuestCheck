@@ -668,7 +668,7 @@ local s = game.Players.LocalPlayer.Data.Level.Value
             NameMon = 'High Disciple'
             PosQ = CFrame.new(9638, -1992, 9613)
             PosM = CFrame.new(9826, -1994, 9624)
-        elseif s == 2725 or s <= 2749 then
+        elseif s >= 2725 then
             Mon = 'Grand Devotee'
             Qdata = 2
             Qname = 'SubmergedQuest3'
