@@ -1928,3 +1928,5 @@ Module.RunModules = (function()
 	
 	return Modules
 end)()
+
+return Module
