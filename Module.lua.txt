@@ -339,11 +339,11 @@ local Module = {} do
       Quest = {"PiratePortQuest", CFrame.new(-449, 109, 5950)}
     },
     ["Hydra Leader"] = {
-      IsBoss = true,
-      Level = 1675,
-      Position = CFrame.new(5730, 602, 199),
-      Quest = {"VenomCrewQuest", CFrame.new(5448, 602, 748)}
-    },
+	 IsBoss = true,
+	 Level = 1675,
+	 Position = CFrame.new(5836, 1019, -83),
+	 Quest = {"VenomCrewQuest", CFrame.new(5214, 1004, 761)}
+	},
     ["Kilo Admiral"] = {
       IsBoss = true,
       Level = 1750,
