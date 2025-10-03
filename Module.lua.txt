@@ -1,7 +1,3 @@
-local importer = ...
-assert(type(importer) == "table", "package importer not found")
-assert(type(importer.Import) == "function", "Import not found")
-
 local RobloxServices = importer:Import("RobloxServices")
 local Connections = importer:Import("Connections")
 local Obfuscated = importer:Import("Obfuscated")
