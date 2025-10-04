@@ -1834,23 +1834,80 @@ Module.FastAttack = (function()
 		end
 	end
 
-	function FastAttack:UseNormalClick(Cooldown)
-		self:UpdateBladeHits()
+	function FastAttack:UseNormalClick(...)
+    local a1, a2, a3 = ...
+    if type(a1) == "number" and a2 == nil then
+        local Cooldown = a1
+        self:UpdateBladeHits()
 
-		if #CurrentBladeHits > 0 then
-			local PrimaryRootPart = table.remove(CurrentBladeHits)[2]
+        if #CurrentBladeHits > 0 then
+            local PrimaryRootPart = table.remove(CurrentBladeHits)[2]
 
-			if SUCCESS_FLAGS and COMBAT_REMOTE_THREAD and HIT_FUNCTION then
-				RE_RegisterAttack:FireServer(Cooldown)
-				HIT_FUNCTION(PrimaryRootPart, CurrentBladeHits)
-			elseif SUCCESS_FLAGS and not COMBAT_REMOTE_THREAD then
-				RE_RegisterAttack:FireServer(Cooldown)
-				RE_RegisterHit:FireServer(PrimaryRootPart, CurrentBladeHits)
-			else
-				table.insert(CurrentBladeHits, { Player.Character, PrimaryRootPart })
-				ExpandsHitBox(CurrentBladeHits)
+            if SUCCESS_FLAGS and COMBAT_REMOTE_THREAD and HIT_FUNCTION then
+                RE_RegisterAttack:FireServer(Cooldown)
+                HIT_FUNCTION(PrimaryRootPart, CurrentBladeHits)
+            elseif SUCCESS_FLAGS and not COMBAT_REMOTE_THREAD then
+                RE_RegisterAttack:FireServer(Cooldown)
+                RE_RegisterHit:FireServer(PrimaryRootPart, CurrentBladeHits)
+            else
+                table.insert(CurrentBladeHits, { Player.Character, PrimaryRootPart })
+                ExpandsHitBox(CurrentBladeHits)
 
-				VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 1); task.wait(0.05)
+                VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 1); task.wait(0.05)
+                VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 1)
+            end
+        end
+
+        return
+    end
+
+    local Humanoid = a1
+    local Character = a2 or Player.Character
+    local Cooldown = a3 or 0.3
+
+    local BladeHits = {}
+    self.EnemyRootPart = nil
+
+    if type(self.GetAllBladeHits) == "function" then
+        BladeHits = self:GetAllBladeHits(Character)
+    else
+        self:UpdateBladeHits()
+        for i = 1, #CurrentBladeHits do
+            local entry = CurrentBladeHits[i]
+            if entry and entry[1] and entry[2] then
+                table.insert(BladeHits, { entry[1], entry[2] })
+            end
+        end
+        if #BladeHits > 0 and not self.EnemyRootPart then
+            self.EnemyRootPart = BladeHits[1][2]
+        end
+    end
+
+    local EnemyRoot = self.EnemyRootPart or (BladeHits[1] and BladeHits[1][2])
+
+    if EnemyRoot then
+        if SUCCESS_FLAGS and COMBAT_REMOTE_THREAD and HIT_FUNCTION then
+            RE_RegisterAttack:FireServer(Cooldown)
+            HIT_FUNCTION(EnemyRoot, BladeHits)
+        elseif SUCCESS_FLAGS and not COMBAT_REMOTE_THREAD then
+            RE_RegisterAttack:FireServer(Cooldown)
+            RE_RegisterHit:FireServer(EnemyRoot, BladeHits)
+        else
+            if EnemyRoot and EnemyRoot.IsA and EnemyRoot:IsA("BasePart") then
+                EnemyRoot.Size = Vector3.one * 50
+            end
+            for i = 1, #BladeHits do
+                local b = BladeHits[i][2]
+                if b and b.IsA and b:IsA("BasePart") then
+                    b.Size = Vector3.one * 50
+                end
+            end
+
+            VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 1); task.wait(0.05)
+            VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 1)
+        end
+    end
+endMouseButtonEvent(0, 0, 0, true, game, 1); task.wait(0.05)
 				VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 1)
 			end
 		end
