@@ -127,7 +127,7 @@ local Module = {} do
   
   Module.IsSuperBring = false
   Module.RemoveCanTouch = 0
-  Module.AttackCooldown = 0.000000003
+  Module.AttackCooldown = 0.000000002
   Module.MaxLevel = 2800
   Module.Webhooks = false
   Module.JobIds = true
